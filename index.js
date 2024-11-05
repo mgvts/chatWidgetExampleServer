@@ -5,7 +5,17 @@ const bodyParser = require("body-parser");
 const app = express();
 const port = 3000;
 
-app.use(cors());
+app.use(cors({
+    origin: [
+        'http://localhost:5173',          // для локальной разработки
+        'https://mgvts.github.io',        // для продакшена
+        'http://localhost:4173'           // для preview режима
+    ],
+    methods: ['GET', 'POST'],
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(bodyParser.json());
 
 app.post("/chat", (req, res) => {
