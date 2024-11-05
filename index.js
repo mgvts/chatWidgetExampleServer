@@ -29,7 +29,7 @@ app.post("/chat", (req, res) => {
             content: `Получено: ${message}`,
             timestamp: new Date().toISOString(),
             options: {
-                radio: ["Ответ 1", "Ответ 2"],
+                radio: ["answer 1", "answer 2"],
             },
         });
     } else if (message == "checkbox") {
@@ -37,7 +37,7 @@ app.post("/chat", (req, res) => {
             content: `Получено: ${message}`,
             timestamp: new Date().toISOString(),
             options: {
-                checkbox: ["Выбор А", "Выбор Б"],
+                checkbox: ["choose A", "choose B"],
             },
         });
     } else {
