@@ -26,7 +26,7 @@ app.post("/chat", (req, res) => {
     const { message } = req.body;
     if (message == "radio") {
         res.json({
-            content: `Получено: ${message}`,
+            content: `Received: ${message}`,
             timestamp: new Date().toISOString(),
             options: {
                 radio: ["answer 1", "answer 2"],
@@ -34,7 +34,7 @@ app.post("/chat", (req, res) => {
         });
     } else if (message == "checkbox") {
         res.json({
-            content: `Получено: ${message}`,
+            content: `Received: ${message}`,
             timestamp: new Date().toISOString(),
             options: {
                 checkbox: ["choose A", "choose B"],
@@ -42,7 +42,7 @@ app.post("/chat", (req, res) => {
         });
     } else {
         res.json({
-            content: `Получено: ${message}`,
+            content: `Received: ${message}`,
             timestamp: new Date().toISOString(),
         });
     }
