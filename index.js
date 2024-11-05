@@ -17,6 +17,10 @@ app.use(cors({
 }));
 
 app.use(bodyParser.json());
+app.use((req, res, next) => {
+    console.log(`${req.method} ${req.url}`, req.body);
+    next();
+});
 
 app.post("/chat", (req, res) => {
     const { message } = req.body;
