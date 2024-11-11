@@ -7,9 +7,9 @@ const port = 3000;
 
 app.use(cors({
     origin: [
-        'http://localhost:5173',          // для локальной разработки
-        'https://mgvts.github.io',        // для продакшена
-        'http://localhost:4173'           // для preview режима
+        'http://localhost:5173',         
+        'https://mgvts.github.io',       
+        'http://localhost:4173'          
     ],
     methods: ['GET', 'POST'],
     credentials: true,
